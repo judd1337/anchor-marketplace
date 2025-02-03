@@ -89,8 +89,8 @@ impl<'info> List<'info> {
         let cpi_accounts = TransferChecked {
             from: self.maker_ata.to_account_info(),
             to: self.vault.to_account_info(),
-            authority: self.maker.to_account_info(),
             mint: self.maker_mint.to_account_info(),
+            authority: self.maker.to_account_info(),
         };
 
         let cpi_ctx = CpiContext::new(cpi_program, cpi_accounts);
